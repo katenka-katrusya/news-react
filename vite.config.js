@@ -8,5 +8,16 @@ export default defineConfig({
     alias: {
       '@': '/src'
     }
-  }
+  },
+  css: {
+    preprocessorOptions: {
+      sass: {
+        // Используем современный API
+        api: 'modern-compiler',
+      },
+      scss: {
+        api: 'modern-compiler', // Или "modern", "legacy"
+      },
+    },
+  },
 })
